@@ -193,3 +193,15 @@ main {
     padding: 0;
   }
 }
+
+.repoInformation{
+  display: flex;
+  padding-top: 7px;
+}
+
+.repoInformation div{
+  border-radius: 5px;
+  padding: 4px;
+  margin-left: 5px;
+  background-color: rgb(135, 101, 167);
+}

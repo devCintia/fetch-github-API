@@ -8,8 +8,6 @@ const user = {
     followers: '',
     following: '',
     events: [],
-    forks: '',
-    commits: [],
 
     setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url

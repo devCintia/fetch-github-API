@@ -12,7 +12,15 @@ const screen = {
                          </div>`
 
         let repositoriesItens = ''
-        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}<br><img src="./src/images/repo-forked.svg"> ${repo.forks}  ⭐${repo.stargazers_count}  <img src="./src/images/eye.svg"> ${repo.watchers}  <img src="./src/images/code-review.svg"> ${repo.language ?? 'Indefinida'}</a></li>`)
+        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}<br>
+            <section class="repoInformation">
+                <div><img src="./src/images/repo-forked.svg"> ${repo.forks}</div>
+                <div>⭐${repo.stargazers_count}</div>
+                <div><img src="./src/images/eye.svg"> ${repo.watchers}</div>
+                <div><img src="./src/images/code-review.svg"> ${repo.language ?? 'Indefinida'}</div>
+            </section>
+            
+            </a></li>`)
 
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class= "repositories section">
@@ -32,7 +40,7 @@ const screen = {
                     eventsItens += `<li>"${eventName}" - "${eventMsg}" </li>`
                 })
             } else if (ev.type === "CreateEvent") {
-                eventsItens += `<li><p><span>${eventName}</span> - Não há commits</p></li>`
+                eventsItens += `<li><strong>${eventName}</strong> - Sem msg de commit</li>`
             }
         })
 
