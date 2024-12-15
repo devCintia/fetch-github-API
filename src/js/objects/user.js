@@ -9,9 +9,9 @@ const user = {
     following: '',
     events: [],
     forks: '',
-    commits:[],
+    commits: [],
 
-    setInfo(gitHubUser){
+    setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
         this.bio = gitHubUser.bio
@@ -21,17 +21,15 @@ const user = {
         this.events = gitHubUser.events
         this.forks = gitHubUser.forks
         this.commits = gitHubUser.commits
-    } ,
-   
-    setRepositories(repositories){
+    },
+
+    setRepositories(repositories) {
         this.repositories = repositories
     },
 
-    setEvents(events){
+    setEvents(events) {
         this.events = events
     }
-    
-    
 }
 
 export { user }
