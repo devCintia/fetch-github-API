@@ -50,6 +50,8 @@ async function getUserData(userName) {
     const events = eventsResponse.filter((event)=>{
         return event.type === "PushEvent" || event.type === "CreateEvent"})
 
+    
+
     user.setEvents(events)
     console.log(events)
 
