@@ -197,6 +197,8 @@ main {
 .repoInformation{
   display: flex;
   padding-top: 7px;
+  align-items: center;
+  justify-content: center;
 }
 
 .repoInformation div{
@@ -204,4 +206,8 @@ main {
   padding: 4px;
   margin-left: 5px;
   background-color: rgb(135, 101, 167);
+}
+.repoInformation div img{
+  width: 20px;
+  height: 20px;
 }

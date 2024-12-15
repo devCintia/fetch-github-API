@@ -14,10 +14,10 @@ const screen = {
         let repositoriesItens = ''
         user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}<br>
             <section class="repoInformation">
-                <div><img src="./src/images/repo-forked.svg"> ${repo.forks}</div>
+                <div><img src="./src/images/repo-forked.png"> ${repo.forks}</div>
                 <div>⭐${repo.stargazers_count}</div>
-                <div><img src="./src/images/eye.svg"> ${repo.watchers}</div>
-                <div><img src="./src/images/code-review.svg"> ${repo.language ?? 'Indefinida'}</div>
+                <div><img src="./src/images/eye.png"> ${repo.watchers}</div>
+                <div><img src="./src/images/code-review.png"> ${repo.language ?? 'Indefinida'}</div>
             </section>
             
             </a></li>`)
